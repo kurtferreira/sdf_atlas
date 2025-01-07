@@ -115,7 +115,7 @@ std::string SdfAtlas::ini( float tex_height, bool flip_texcoord_y ) const {
     }
 
     std::stringstream ss;
-    ss << "version=1" << std::endl;
+    ss << "version=2" << std::endl; // v2 is SDF font atlas
     ss << "name=" << res_filename << std::endl;
     ss << "texture=" << res_filename << ".png" << std::endl;
 
