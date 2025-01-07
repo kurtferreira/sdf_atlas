@@ -7,10 +7,10 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -27,7 +27,7 @@
 struct GlyphRect {
     uint32_t codepoint = 0;
     int      glyph_idx = 0;
-    float x0 = 0.0f, y0 = 0.0f, x1 = 0.0f, y1 = 0.0f;    
+    float x0 = 0.0f, y0 = 0.0f, x1 = 0.0f, y1 = 0.0f;
 };
 
 struct SdfAtlas {
@@ -47,11 +47,12 @@ struct SdfAtlas {
 
     void allocate_codepoint( uint32_t codepoint );
 
-    void allocate_all_glyphs();    
+    void allocate_all_glyphs();
 
-    void allocate_unicode_range( uint32_t start, uint32_t end ); // end is inclusive    
-    
+    void allocate_unicode_range( uint32_t start, uint32_t end ); // end is inclusive
+
     void draw_glyphs( GlyphPainter& gp ) const;
 
     std::string json( float tex_height, bool flip_texcoord_y = true ) const;
+    std::string ini( float tex_height, bool flip_texcoord_y = true ) const;
 };

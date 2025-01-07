@@ -9,6 +9,9 @@ bin/
 # Xmake cache
 .xmake/
 build/
+*.ttf
+*.atlas
+*.png
 
 # MacOS Cache
 .DS_Store
